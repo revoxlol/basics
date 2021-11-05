@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="#">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1 id="counter" style="font-size: 48; text-align: center; padding: 50%;"></h1>
+    <h1 id="time" style="font-size: 48; text-align: center; padding: 50%;"></h1>
     <script>
-    var counter = 0;
 
-    const myFunction = function(){
-        counter++;
-        document.getElementById("counter").innerText = counter;
-    };
+function checkTime(i) {
+ if (Number(i) < 10)  i = "0" + i;
+ return i;
+}
 
-    setInterval(()=>{
-        counter++;
-        document.getElementById("counter").innerText = counter;
-    }, 1000);
+function startTime()
+  {
 
+     let currentTime = new Date();
+     var h = currentTime.getHours();
+     var m = currentTime.getMinutes();
+     var s = currentTime.getSeconds();
+     
+    document.getElementById("time").innerText = checkTime(h) + ":" + checkTime(m) + ":" + checkTime(s);
+}
+
+setInterval(() => {
+    startTime();
+}, 1000);
 
     </script>
 </body>
