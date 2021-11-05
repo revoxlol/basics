@@ -8,7 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="time" style="font-size: 48; text-align: center; padding: 50%;"></h1>
+    <h1 id="time" style="font-size: 48; text-align: center; padding: 5vh;"></h1>
     <script src="index.js"></script>
+    <form onSubmit="newElement(event)">
+        <input type="text" id="ToDo">
+        <button type="button" onClick="newElement()">Add</button>
+    </form>
+    <ul id="tasklist">
+
+    </ul>
 </body>
 </html>
