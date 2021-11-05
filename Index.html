@@ -9,28 +9,6 @@
 </head>
 <body>
     <h1 id="time" style="font-size: 48; text-align: center; padding: 50%;"></h1>
-    <script>
-
-function checkTime(i) {
- if (Number(i) < 10)  i = "0" + i;
- return i;
-}
-
-function startTime()
-  {
-
-     let currentTime = new Date();
-     var h = currentTime.getHours();
-     var m = currentTime.getMinutes();
-     var s = currentTime.getSeconds();
-     
-    document.getElementById("time").innerText = checkTime(h) + ":" + checkTime(m) + ":" + checkTime(s);
-}
-
-setInterval(() => {
-    startTime();
-}, 1000);
-
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
